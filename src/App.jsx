@@ -7,6 +7,7 @@ import "./components/RestaurantRows/RestaurantRows"
 import { createDataSet } from "./data/dataset"
 import "./App.css"
 import "./components/Chip/Chip"
+import "./components/DataSource/DataSource"
 import "./components/CategoriesColumn/CategoriesColumn"
 import Header from "./components/Header/Header"
 import Instructions from "./components/Instructions/Instructions"
@@ -14,6 +15,7 @@ import { useState } from "react"
 import { CategoriesColumn } from "./components/CategoriesColumn/CategoriesColumn"
 import MenuDisplay from "./components/MenuDisplay/MenuDisplay"
 import RestaurantRows from "./components/RestaurantRows/RestaurantRows"
+import DataSource from "./components/DataSource/DataSource"
 
 // don't move this!
 export const appInfo = {
@@ -87,7 +89,7 @@ export function App() {
         <MenuDisplay currentMenuItems = {currentMenuItems} menuItem = {menuItem} setMenuItem = {setMenuItem} menuItemUnselected = {menuItemUnselected}/>
 
         <div className="data-sources">
-          <p>{appInfo.dataSource}</p>
+          <DataSource appInfo = {appInfo}/>
         </div>
       </div>
     </main>
